@@ -43,6 +43,10 @@ target 'EventVisor' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+    permissions_path = '../node_modules/react-native-permissions/ios'
+    pod 'Permission-LocationAccuracy', :path => "#{permissions_path}/LocationAccuracy"
+    pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse"
+
   target 'EventVisorTests' do
     inherit! :complete
     # Pods for testing
